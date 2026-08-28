@@ -1,0 +1,2 @@
+# ¿Qué se necesita para ganar el Balón de Oro?
+ Año tras año, los mejores futbolistas del mundo compiten por uno de los reconocimientos más importantes del fútbol. Pero detrás de cada ganador existen estadísticas, títulos, actuaciones y decisiones que pueden explicar por qué un jugador terminó imponiéndose sobre los demás. En este proyecto analizaremos la historia del premio para descubrir qué factores han influido en su elección y si ganar títulos colectivos realmente puede marcar la diferencia.
