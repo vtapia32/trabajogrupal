@@ -1,4 +1,5 @@
-Presentación de propuesta
+# Presentación de propuesta
+
 Síntesis del proyecto:
 El Balón de Oro es uno de los reconocimientos individuales más importantes del fútbol mundial. El premio fue creado en 1956 por la revista francesa France Football y originalmente estaba destinado exclusivamente a futbolistas europeos que jugaran en clubes europeos. Con el paso del tiempo, esta restricción fue modificándose hasta convertirse en un premio abierto a jugadores de todas las nacionalidades.
 La WebStory buscará recorrer la historia del premio a través de sus distintos ganadores, considerando no solo quién obtuvo el reconocimiento, sino también qué hizo durante el año en cuestión. Para cada jugador se pueden analizar sus estadísticas y logros individuales, junto con los títulos obtenidos con su club o selección, permitiendo comprender qué méritos fueron determinantes para ganar el premio en cada época.

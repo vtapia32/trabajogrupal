@@ -1,4 +1,5 @@
 Ideas para contar la historia:
+
 La primera idea sería construir la historia a partir de una comparación entre jugadores. En cada caso se mostraría al ganador del Balón de Oro y a uno de sus principales competidores, comparando sus estadísticas individuales, los títulos que consiguieron durante la temporada y el resultado de la votación.
 La idea es que el lector pueda ir descubriendo si realmente los títulos colectivos, como la Champions League o el Mundial, tienen un peso importante en la elección. Visualmente se podrían utilizar gráficos de barras, fotografías y comparaciones interactivas. Al final de cada caso se podría mostrar si este apoya o contradice nuestra hipótesis.
 La segunda idea sería realizar un recorrido histórico e interactivo por el premio. Así poder mostrar los principales cambios que hay tenido el Balón de Oro, los jugadores que podían ganarlo, quiénes votaban, cómo cambiaron las reglas y cómo pasó de ser un premio europeo para convertirse en un reconocimiento mundial.
