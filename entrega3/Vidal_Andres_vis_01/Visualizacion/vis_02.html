@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-79b7bda31de1f3929193889289dc23f6"}, "mark": {"type": "arc", "innerRadius": 65, "outerRadius": 130}, "encoding": {"color": {"field": "Seleccion", "title": "Condici\u00f3n de Selecci\u00f3n", "type": "nominal"}, "theta": {"field": "Cantidad", "type": "quantitative"}, "tooltip": [{"field": "Seleccion", "type": "nominal"}, {"field": "Cantidad", "type": "quantitative"}, {"field": "Porcentaje", "format": ".1f", "title": "Porcentaje (%)", "type": "quantitative"}]}, "height": 400, "params": [{"name": "param_7", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Ganadores del Bal\u00f3n de Oro (1956-1999): T\u00edtulos reales con la Selecci\u00f3n", "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-79b7bda31de1f3929193889289dc23f6": [{"Seleccion": "Sin T\u00edtulo de Selecci\u00f3n en ese a\u00f1o", "Cantidad": 33, "Porcentaje": 75.0}, {"Seleccion": "Campeones con Selecci\u00f3n (Mundial/Euro/Copa)", "Cantidad": 11, "Porcentaje": 25.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
