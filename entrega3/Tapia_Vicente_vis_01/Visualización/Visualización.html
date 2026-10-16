@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Impacto de la Champions League en el Balón de Oro</title>
+  <!-- Scripts de Vega y Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .viz-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <div class="viz-container">
+    <div id="vis"></div>
+  </div>
+  <script>
+    var spec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": "Impacto de la Champions League en el Balón de Oro (2000-2025)",
+      "width": "container",
+      "height": 260,
+      "data": {
+        "values": [
+          {"Grupo_Posicion": "1º Balón de Oro", "UCL_Label": "Ganó Champions", "Porcentaje": 41.7, "Cantidad": 10},
+          {"Grupo_Posicion": "1º Balón de Oro", "UCL_Label": "No ganó Champions", "Porcentaje": 58.3, "Cantidad": 14},
+          {"Grupo_Posicion": "2º y 3º (Podio)", "UCL_Label": "Ganó Champions", "Porcentaje": 31.2, "Cantidad": 15},
+          {"Grupo_Posicion": "2º y 3º (Podio)", "UCL_Label": "No ganó Champions", "Porcentaje": 68.8, "Cantidad": 33},
+          {"Grupo_Posicion": "4º y 5º lugar", "UCL_Label": "Ganó Champions", "Porcentaje": 33.3, "Cantidad": 16},
+          {"Grupo_Posicion": "4º y 5º lugar", "UCL_Label": "No ganó Champions", "Porcentaje": 66.7, "Cantidad": 32}
+        ]
+      },
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "x": {
+              "field": "Porcentaje",
+              "type": "quantitative",
+              "title": "Porcentaje de jugadores (%)",
+              "scale": {"domain": [0, 100]}
+            },
+            "y": {
+              "field": "Grupo_Posicion",
+              "type": "nominal",
+              "title": "Posición en el Top 5",
+              "sort": ["1º Balón de Oro", "2º y 3º (Podio)", "4º y 5º lugar"]
+            },
+            "color": {
+              "field": "UCL_Label",
+              "type": "nominal",
+              "title": "Champions League",
+              "scale": {
+                "domain": ["Ganó Champions", "No ganó Champions"],
+                "range": ["#1F4E79", "#B0C4DE"]
+              }
+            },
+            "tooltip": [
+              {"field": "Grupo_Posicion", "type": "nominal", "title": "Posición"},
+              {"field": "UCL_Label", "type": "nominal", "title": "Estado Champions"},
+              {"field": "Porcentaje", "type": "quantitative", "title": "Porcentaje (%)"},
+              {"field": "Cantidad", "type": "quantitative", "title": "Cantidad de jugadores"}
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "color": "white",
+            "fontWeight": "bold",
+            "dx": 0,
+            "dy": 0
+          },
+          "encoding": {
+            "x": {
+              "field": "Porcentaje",
+              "type": "quantitative",
+              "stack": "zero"
+            },
+            "y": {
+              "field": "Grupo_Posicion",
+              "type": "nominal",
+              "sort": ["1º Balón de Oro", "2º y 3º (Podio)", "4º y 5º lugar"]
+            },
+            "text": {
+              "field": "Porcentaje",
+              "type": "quantitative",
+              "format": ".1f"
+            }
+          }
+        }
+      ]
+    };
+    vegaEmbed('#vis', spec, {actions: false}).catch(console.error);
+  </script>
+</body>
+</html>
